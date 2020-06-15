@@ -1,0 +1,13 @@
+[dev]
+  command = "npm run dev"
+
+[build]
+  publish = "dist"
+  functions = "functions"
+
+[[redirects]]
+  from = "/darksky"
+  to = "https://api.darksky.net/forecast/KEY/47.6020041,-122.3352948?exclude=minutely,hourly,daily,alerts,flags"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
