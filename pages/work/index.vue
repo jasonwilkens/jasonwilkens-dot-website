@@ -2,7 +2,7 @@
   <div>
     <header>
       <nav class="step-1">
-        <router-link to="/">Home</router-link>
+        <n-link to="/">Home</n-link>
         /
       </nav>
       <h1 class="step-1">Work</h1>
@@ -10,7 +10,7 @@
     <main>
       <article class="step-0">
         <section id="indeed">
-          <router-link to="/work/indeed">
+          <n-link to="/work/indeed">
             <div class="preview-wrapper">
               <IndeedLogo/>
               <p>2018 - Now</p>
@@ -18,10 +18,10 @@
                 <img alt="Japan job search screenshot" class="preview-image" height="512" width="768" src="/images/indeed/768/768-indeed-japan-search.png"/>
               </div>
             </div>
-          </router-link>
+          </n-link>
         </section>
         <section id="linkedin">
-          <router-link to="/work/linkedin">
+          <n-link to="/work/linkedin">
             <div class="preview-wrapper">
               <LinkedInLogo/>
               <p>2014 - 2018</p>
@@ -29,10 +29,10 @@
                 <img alt="Mad River project screenshot" class="preview-image" height="512" width="768" src="/images/linkedin/768/768-linkedin-final-mock.png"/>
               </div>
             </div>
-          </router-link>
+          </n-link>
         </section>
         <section id="bizo">
-          <router-link to="/work/bizo">
+          <n-link to="/work/bizo">
             <div class="preview-wrapper">
               <BizoLogo/>
               <p>2012 - 2014</p>
@@ -40,10 +40,10 @@
                 <img alt="Marketing platform screenshot" class="preview-image" height="512" width="768" src="/images/bizo/768/768-bizo-dashboard.png"/>
               </div>
             </div>
-          </router-link>
+          </n-link>
         </section>
         <section id="esurance">
-          <router-link to="/work/esurance">
+          <n-link to="/work/esurance">
             <div class="preview-wrapper">
               <EsuranceLogo/>
               <p>2010 - 2012</p>
@@ -51,7 +51,7 @@
                 <img alt="Coverage Counselor screenshot" class="preview-image" height="512" width="768" src="/images/esurance/768/768-esurance-start.png"/>
               </div>
             </div>
-          </router-link>
+          </n-link>
         </section>
       </article>
     </main>
@@ -80,14 +80,21 @@ export default {
 </script>
 
 <style scoped>
-main { padding-top: 8rem; }
+main { padding-top: 6rem; }
 
 article {
   display: grid;
   position: relative;
   grid-template-columns: 1fr;
-  row-gap: 6rem;
-  --decorative-gradient: repeating-linear-gradient(
+  row-gap: 5rem;
+  --small-decorative-gradient: repeating-linear-gradient(
+    60deg,
+    var(--clr-background),
+    var(--clr-background) .75rem,
+    var(--clr-highlight) .75rem,
+    var(--clr-highlight) 1rem
+  );
+  --big-decorative-gradient: repeating-linear-gradient(
     45deg,
     var(--clr-background),
     var(--clr-background) 1rem,
@@ -163,14 +170,14 @@ section[id] a:focus p::before { opacity: 1; }
 
 article::before, article::after {
   position: absolute;
-  background: var(--decorative-gradient);
+  background: var(--small-decorative-gradient);
   z-index: -1;
 }
 
 article::before {
   content: '';
   min-height: 3rem;
-  top: -7.5rem;
+  top: -5.5rem;
   left: 0;
   right: 2rem;
 }
@@ -180,6 +187,11 @@ article::before {
     min-width: 25.25rem;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .preview-image {
+    width: 24rem;
+    height: 16rem;
   }
 }
 
@@ -206,7 +218,10 @@ article::before {
 
 /* Columns */
 @media screen and (min-width: 1100px) {
-  main { padding-top: 6rem; }
+  main {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
 
   article {
     grid-template-columns: 1fr 1fr;
@@ -218,7 +233,7 @@ article::before {
   }
 }
 
-@media screen and (min-width: 2000px) {
+@media screen and (min-width: 2200px) {
   main { padding-top: unset; }
 
   article {
@@ -231,6 +246,7 @@ article::before {
 
   article::before, article::after {
     content: '';
+    background: var(--big-decorative-gradient);
     min-height: 8rem;
     min-width: 100%;
   }
@@ -246,6 +262,6 @@ article::before {
     left: 0;
   }
 
-  article > section { max-width: 24rem; }
+  article > section { max-width: 26.25rem; }
 }
 </style>

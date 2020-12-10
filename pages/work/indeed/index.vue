@@ -5,12 +5,11 @@
       <WorkGrid>
         <h2 class="step-2">Design engineering</h2>
         <p class="step-0">I came to Indeed because I was excited about how their design organization was being built. They were hiring for the type of
-          position I really wanted &mdash; a role that involved designing and developing to ideate and validate new ideas.
+          position I really wanted &mdash; a role that involved designing and developing to generate and validate new ideas.
         </p>
-        <p class="step-0">As a <a href="https://medium.com/indeed-design/what-is-a-design-technologist-6431531f0d48" target="_blank">design
+        <p class="step-0">As a <a href="https://medium.com/indeed-design/what-is-a-design-technologist-6431531f0d48" target="_blank" rel="noopener">design
           technologist</a> I worked with teams around the country and in Japan to build research prototypes and brand new UIs for greenfield projects.
         </p>
-
         <div class="connector">
           <h3 class="step-1">Experiments</h3>
           <p class="step-0">Indeed is a data-driven company. The impact of everything we launch is closely scrutinized in our business metrics.
@@ -39,7 +38,6 @@
         <p class="step-0">We also prototyped features that would show the visual changes between experiment variants alongside the data, to help people
           make more informed decisions about changes in Indeed's user interface.
         </p>
-
         <div class="connector">
           <h3 class="step-1">Job search Japan</h3>
           <p class="step-0">Japan is the second biggest job market after the U.S., but it's very hard to break into due to Japan-specific hiring practices
@@ -52,11 +50,9 @@
             <figcaption class="step--1">Screens from the Japan-specific job search prototype</figcaption>
           </figure>
         </aside>
-
         <p class="step-0">I prepared a Japan-specific mobile design for user research for our dedicated Japan product team. It was a great chance to
           learn about Japanese job seekers and the design sensibility of web products in Japan.
         </p>
-
         <div class="connector">
           <h3 class="step-1">Design system</h3>
           <p class="step-0">I joined the design system team to improve and extend Indeed's component library. From developer feedback we saw the need
@@ -72,7 +68,6 @@
         <p class="step-0">I helped the team explore options for development, particularly around the
           possibility of supporting both existing Indeed brand language and a new brand that was being developed around the same time.
         </p>
-
         <div class="connector">
           <h3 class="step-1">Enterprise</h3>
           <p class="step-0">After a couple years I became the manager for design engineering in the Enterprise division. I'm leading our division's effort

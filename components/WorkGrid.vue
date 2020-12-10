@@ -5,11 +5,13 @@
 </template>
 
 <style scoped>
-article.work-grid { margin-top: 4em; }
+article.work-grid { margin-top: 1em; }
 
 h2 { margin: .25rem 0 0; }
 
 h2 + p { margin-top: 1em; }
+
+h4 { display: block; }
 
 h3 { margin-bottom: 0; }
 
@@ -20,8 +22,6 @@ section { margin-top: 0; }
 aside {
   margin: 0;
   margin-bottom: 1em;
-  border-top: .25rem solid var(--clr-highlight);
-  padding-top: 1rem;
 }
 
 aside img {
@@ -29,7 +29,12 @@ aside img {
   max-width: 100%;
 }
 
-figure { margin: 0; }
+figure {
+  margin: 0;
+  display: inline-block;
+  border-top: .25rem solid var(--clr-highlight);
+  padding-top: 1rem;
+}
 
 .connector {
   display: inline-block;
@@ -40,14 +45,19 @@ figure { margin: 0; }
 
 .connector h2, .connector h3 { margin-top: .25rem; }
 
-.connector h4 { margin: 0; }
+.connector h4 { margin: 1em 0 0; }
+
+.connector h4:first-child { margin-top: 0; }
 
 @media screen and (min-width: 512px) {
   aside { display: inline-block; }
 }
 
 @media screen and (min-width: 960px) {
-  article.work-grid { max-width: calc(50ch + 40rem); }
+  article.work-grid {
+    margin-top: 4em;
+    max-width: calc(50ch + 40rem);
+  }
 
   aside {
     display: unset;
@@ -66,10 +76,10 @@ figure { margin: 0; }
 @media screen and (min-width: 2000px) {
   article.work-grid { max-width: unset; }
 
-  .iframe-aside { display: block; }
-
   aside {
-    display: inline-block;
+    display: block;
+    overflow: auto;
+    max-height: 4000px;
     margin: unset;
     margin-top: .25rem;
     float: unset;

@@ -6,8 +6,8 @@
   functions = "functions"
 
 [[redirects]]
-  from = "/darksky"
-  to = "https://api.darksky.net/forecast/KEY/47.6020041,-122.3352948?exclude=minutely,hourly,daily,alerts,flags"
+  from = "/here"
+  to = "https://weather.ls.hereapi.com/weather/1.0/report.json?apiKey=HEREAPI&product=observation&oneobservation=true&metric=false&name=Seattle"
   status = 200
   force = true
   headers = {X-From = "Netlify"}

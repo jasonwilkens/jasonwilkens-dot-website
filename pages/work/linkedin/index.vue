@@ -11,13 +11,21 @@
         <p class="step-0">At LinkedIn I got to really become a front-end developer. I'll always be grateful to them for giving me the opportunity to make
           that transformation.
         </p>
-        <p class="step-0">The biggest design (and organizational) challenge I faced was how to reconcile the Bizo and LinkedIn advertising platforms.
+        <aside>
+          <figure>
+            <img alt="" width="960" height="610" src="/images/linkedin/960/960-linkedin-lla.png"/>
+            <figcaption class="step--1">LinkedIn Lead Accelerator reporting</figcaption>
+          </figure>
+        </aside>
+        <p class="step-0">The biggest design (and organizational) challenge I faced was how to reconcile the Bizo and LinkedIn advertising platforms. In most
+          respects these two platforms were completely different: features and functionality; business and pricing models; customer profiles. The only things
+          they had in common were that they both served ads and used LinkedIn's data to do it.
         </p>
-
+        <p class="step-0">Solving this problem showed the power of design to re-orient an organization around a vision based on serving customer needs.
+        </p>
         <div class="connector">
           <h2 class="step-1">Mad River</h2>
           <br/>
-
           <h4 class="step-0">Problem</h4>
           <p class="step-0">My team was continuing to build out the Bizo platform (re-skinned visually and rebranded as LinkedIn Lead Accelerator) while another
             product team was working on LinkedIn's Campaign Manager ad platform. Lead Accelerator was designed for sophisticated B2B marketers but most
@@ -25,14 +33,12 @@
             sign up for, but had basic features and was struggling to keep up with our competition.
           </p>
         </div>
-
         <aside>
           <figure>
-            <img alt="" width="960" height="606" src="/images/linkedin/960/960-linkedin-lla.png"/>
-            <figcaption class="step--1">LinkedIn Lead Accelerator reporting</figcaption>
+            <img alt="" width="960" height="660" src="/images/linkedin/960/960-linkedin-flow.png"/>
+            <figcaption class="step--1">Notes thinking through an objective-based campaign flow</figcaption>
           </figure>
         </aside>
-
         <p class="step-0">The two teams had different roadmaps, but began to leverage each other's features. As the lines between products began to blur there
           was a lot of organizational tension. These circumstances created an opportunity to bring the best technology and analytics from Lead Accelerator to
           a mass-market platform built on the Campaign Manager base. I started working on a design strategy for a unified advertising platform. We liked to
@@ -43,12 +49,6 @@
           designers to create our vision. We drew on our past user research and the assets in LinkedIn's ecosystem to broaden our concept of what the unified
           platform could be.
         </p>
-        <aside>
-          <figure>
-            <img alt="" width="960" height="660" src="/images/linkedin/960/960-linkedin-flow.png"/>
-            <figcaption class="step--1">Notes thinking through an objective-based campaign flow</figcaption>
-          </figure>
-        </aside>
         <p class="step-0">We talked to a couple other LinkedIn design teams that had used design sprints for ideation, and we thought the process made sense
           for us even though we had a pretty good idea of what we wanted to build. We just needed time to develop it.
         </p>

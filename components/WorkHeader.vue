@@ -1,9 +1,9 @@
 <template>
   <header>
     <nav class="step-1">
-      <router-link to="/">Home</router-link>
+      <n-link to="/">Home</n-link>
       /
-      <router-link to="/work">Work</router-link>
+      <n-link to="/work">Work</n-link>
       /
     </nav>
     <h1 class="step-1">{{ title }}</h1>

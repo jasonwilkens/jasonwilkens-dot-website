@@ -1,6 +1,9 @@
 <template>
   <transition name="toast">
-    <p v-if="notificationText" class="notification step-0">{{ notificationText }}</p>
+    <p v-if="notificationText" class="notification step-0">
+      {{ notificationText }}
+      <img height="1" width="1" class="image-pixel" alt="" src="https://px.ads.linkedin.com/collect/?pid=2125481&conversionId=3690161&fmt=gif" />
+    </p>
   </transition>
 </template>
 
@@ -27,6 +30,18 @@ export default {
   margin: 0;
   padding: .5em .75em;
   border-radius: .25rem;
+}
+
+.image-pixel {
+  position: absolute;
+  -webkit-clip: rect(0 0 0 0);
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  border: 0;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 715px) {

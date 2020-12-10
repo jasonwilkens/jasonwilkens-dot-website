@@ -24,7 +24,7 @@
 
 <style>
 .photo-frame {
-  margin-top: 2em;
+  margin-top: 1em;
   max-width: 100%;
 }
 

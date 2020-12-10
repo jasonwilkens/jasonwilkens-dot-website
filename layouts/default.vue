@@ -36,7 +36,7 @@ export default {
     this.calculateWeight();
     window.addEventListener('resize', this.calculateWeight);
   },
-  destroyed () {
+  destroyed() {
     window.removeEventListener('resize', this.calculateWeight);
   },
   methods: {
@@ -75,6 +75,8 @@ export default {
 </script>
 
 <style>
+header { margin: auto; }
+
 main {
   max-width: 104.0625rem;
   margin: auto;
@@ -126,22 +128,22 @@ h1::before, h2::before, h3::before {
 h1::before {
   min-height: 1rem;
   background: repeating-linear-gradient(
-    45deg,
-    var(--clr-background),
-    var(--clr-background) 1rem,
-    var(--clr-highlight) 1rem,
-    var(--clr-highlight) 1.5rem
+    60deg,
+    var(--clr-highlight),
+    var(--clr-highlight) 3px,
+    var(--clr-background) 3px,
+    var(--clr-background) 9px
   );
 }
 
 h2::before, h3::before {
   min-height: .5rem;
   background: repeating-linear-gradient(
-    45deg,
-    var(--clr-background),
-    var(--clr-background) .5rem,
-    var(--clr-highlight) .5rem,
-    var(--clr-highlight) .75rem
+    60deg,
+    var(--clr-highlight),
+    var(--clr-highlight) 2px,
+    var(--clr-background) 2px,
+    var(--clr-background) 6px
   );
 }
 
@@ -199,12 +201,12 @@ body.freeze-body { overflow: hidden; }
 }
 
 @media screen and (min-width: 1150px) {
-  header { padding: 0 8%; }
-
-  main {
-    padding: 0 8% 10rem;
+  header, main {
+    padding: 0 8%;
     max-width: 187.5rem;
   }
+
+  main { padding-bottom: 6rem; }
 
   .menu {
     bottom: 6rem;

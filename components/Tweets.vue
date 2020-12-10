@@ -3,14 +3,16 @@
     <h2 class="step-0">Recently liked</h2>
     <ul class="step-1">
       <li v-for="tweet in tweets" :key="tweet.id">
-          <blockquote class="step-0" :cite="'https://www.twitter.com/' + tweet.user.screen_name + '/status/' + tweet.id_str">
+          <blockquote :id="tweet.id" class="step-0" :cite="'https://www.twitter.com/' + tweet.user.screen_name + '/status/' + tweet.id_str">
             <span class="openq">&ldquo;</span>{{ tweet.full_text }}<span class="closeq">&rdquo;</span>
           </blockquote>
           <cite class="step-0">
             ->
             <a
               target="_blank"
+              rel="noopener"
               :href="'https://www.twitter.com/' + tweet.user.screen_name + '/status/' + tweet.id_str"
+              :aria-describedby="tweet.id"
             >
               <img
                 alt="profile picture"

@@ -11,35 +11,30 @@
         <p class="step-0">I learned a lot about how insurance works, and that customers often don't know how much coverage they need. We developed a tool to
           suggest an appropriate amount of coverage based on their risk factors and the assets they needed to protect.
         </p>
-        <aside class="iframe-aside">
+        <aside>
           <figure>
-            <div class="iframe-container">
-              <iframe src="https://www.youtube-nocookie.com/embed/xoMDVE2e_CU?rel=0" frameborder="0" allowfullscreen></iframe>
-            </div>
-            <figcaption style="margin-top: .5rem;" class="step--1">TV ad for Coverage Counselor</figcaption>
+            <img alt="" width="960" height="895" src="/images/esurance/960/960-esurance-start.png"/>
+            <figcaption class="step--1">Coverage Counselor start page</figcaption>
           </figure>
         </aside>
         <p class="step-0">This was the only product I've ever built that had a national advertising campaign based around it. I distinctly remember going
-          to see a movie with my parents where an ad promoting Coverage Counselor played during the previews.
+          to see a movie with my parents where <a href="https://youtu.be/xoMDVE2e_CU" target="_blank" rel="noopener">an ad promoting Coverage Counselor</a> played during the
+          previews.
         </p>
-
         <div class="connector">
           <h2 class="step-1">Coverage Counselor</h2>
           <br/>
-
           <h4 class="step-0">Problem</h4>
           <p class="step-0">Car insurance customers are very focused on price, sometimes too focused. If you purchase a policy with the lowest limits available
             and cause an accident that puts someone in the hospital, you could use up your insurance quickly and be on the hook for the rest.
           </p>
         </div>
-
         <aside>
           <figure>
             <img alt="" width="960" height="720" src="/images/esurance/960/960-esurance-sxsw-2.png"/>
             <figcaption class="step--1">A demo of Coverage Counselor at the Esurance SXSW booth</figcaption>
           </figure>
         </aside>
-
         <p class="step-0">I led the creation of a tool that provides better information so that people can shop from a perspective of protecting themselves and
           others, instead of solely focusing on saving money.
         </p>
@@ -100,26 +95,4 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.iframe-container {
-  position:         relative;
-  padding-bottom:   56.25%;
-  padding-top:      4rem;
-  height:           0;
-  overflow:         hidden;
-  width: 30rem;
-  max-width: 100%;
-}
-
-.iframe-container iframe,
-.iframe-container object,
-.iframe-container embed {
-  position:         absolute;
-  top:              0;
-  left:             0;
-  height:           100%;
-  width:            100%;
-  max-width: 30rem;
-}
 </style>

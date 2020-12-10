@@ -214,7 +214,7 @@ export default {
   background-color: var(--base-clr-accent);
   color: var(--base-clr-dark);
 }
-.contact-form button.cta:disabled { animation: pulse 500ms infinite; }
+.contact-form button.cta:disabled { background-color: var(--clr-highlight); }
 
 @media screen and (min-width: 715px) {
   .contact-form {
@@ -258,12 +258,5 @@ export default {
 .slide-up-leave-active {
   transition: opacity 300ms ease-in,
               transform 300ms ease-in;
-}
-
-/* Send button animation */
-@keyframes pulse {
-  0% { background-color: var(--base-clr-accent); }
-  50% { background-color: var(--clr-foreground); }
-  100% { background-color: var(--base-clr-accent); }
 }
 </style>

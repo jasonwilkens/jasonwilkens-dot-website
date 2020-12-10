@@ -11,42 +11,44 @@
       <article class="grid">
         <div class="col1">
           <Photo />
-          <About :position="'first'" :darksky="darksky" />
+          <About :position="'about-first'" :here="here" />
           <section class="work">
             <h2 class="step-0">Work</h2>
             <ul class="step-1">
-              <li>I am a designer who codes, or design technologist. I manage a team of designer/developers at Indeed.</li>
-              <li>I've put together a few notes on <router-link to="/work">my work</router-link> over the years.</li>
+              <li>I am a designer who codes, or design technologist. I manage a team of designer/developers at
+                <a target="_blank" href="https://indeed.design/" rel="noopener">Indeed</a>.
+              </li>
+              <li>I've put together a few notes on <n-link to="/work">my work</n-link> over the years.</li>
             </ul>
             <div class="work-screenshots">
-              <router-link to="/work/indeed">
+              <n-link to="/work/indeed">
                 <span class="visually-hidden">Indeed</span>
                 <img alt="Japan job search screenshot" class="screenshot" height="324" width="486" src="/images/indeed/486/486-indeed-japan-search.png"/>
-              </router-link>
-              <router-link to="/work/linkedin">
+              </n-link>
+              <n-link to="/work/linkedin">
                 <span class="visually-hidden">LinkedIn</span>
                 <img alt="Mad River project screenshot" class="screenshot" height="324" width="486" src="/images/linkedin/486/486-linkedin-final-mock.png"/>
-              </router-link>
-              <router-link to="/work/bizo">
+              </n-link>
+              <n-link to="/work/bizo">
                 <span class="visually-hidden">Bizo</span>
                 <img alt="Marketing platform screenshot" class="screenshot" height="324" width="486" src="/images/bizo/486/486-bizo-dashboard.png"/>
-              </router-link>
-              <router-link to="/work/esurance">
+              </n-link>
+              <n-link to="/work/esurance">
                 <span class="visually-hidden">Esurance</span>
                 <img alt="Coverage Counselor screenshot" class="screenshot" height="324" width="486" src="/images/esurance/486/486-esurance-start.png"/>
-              </router-link>
+              </n-link>
             </div>
           </section>
-          <HowItsMade :position="'first'" />
+          <HowItsMade :position="'him-first'" />
         </div>
         <div class="col2">
           <div class="col2-1">
-            <About :position="'second'" :darksky="darksky" />
+            <About :position="'about-second'" :here="here" />
             <Articles :articles="articleData" />
           </div>
           <div class="col2-2">
             <Tweets :tweets="tweetData" />
-            <HowItsMade :position="'second'" />
+            <HowItsMade :position="'him-second'" />
           </div>
         </div>
       </article>
@@ -76,7 +78,7 @@ export default {
   },
   data() {
     return {
-      darksky: null
+      here: null
     };
   },
   asyncData() {
@@ -86,8 +88,8 @@ export default {
     };
   },
   created() {
-    axios.get("/darksky").then(response => {
-      this.darksky = response.data;
+    axios.get("/here").then(response => {
+      this.here = response.data.observations.location[0].observation[0];
     });
   },
   head() {
@@ -188,7 +190,7 @@ header + .grid, .col1 { margin-top: 0; }
 
 /* Responsive content placement, only use this for small pieces */
 
-.about#second, .how-its-made#first { display: none; }
+#about-second, #him-first { display: none; }
 
 /* Adjust screenshot styles for non-mobile */
 
@@ -230,21 +232,17 @@ header + .grid, .col1 { margin-top: 0; }
 
   .col2 { width: 42.86%; }
 
-  main .photo-frame, .col2 section:first-child h2 { margin-top: 1vw; }
+  main .photo-frame, .col2 .articles h2 { margin-top: 1vw; }
 
-  h1, .col2 { margin-top: 0; }
-
-  .col1 section { margin-top: 3em; }
+  h1, .col2, .articles { margin-top: 0; }
 
   .photo-frame { text-align: right; }
 
-  .articles, .tweets, .how-its-made { border-top: .25rem solid var(--clr-foreground); }
+  .work, .tweets, .how-its-made { border-top: .25rem solid var(--clr-foreground); }
 
-  .about#second { display: block; }
+  #him-first { display: inline-block; }
 
-  .how-its-made#first { display: inline-block; }
-
-  .about#first, .how-its-made#second { display: none; }
+  #him-second { display: none; }
 }
 
 /* Grid - As above but adding another 9 portion column and 1 portion gap column, 35 total */
@@ -262,12 +260,21 @@ header + .grid, .col1 { margin-top: 0; }
 
   .col2-2 { margin-top: 0; }
 
-  main .photo-frame, .col2 section:first-child h2 { margin-top: .5vw; }
+  main .photo-frame, .col2 .articles h2 { margin-top: .5vw; }
 
-  .tweets { border-top: none; }
+  .work, .tweets { border-top: none; }
 
-  .how-its-made#first { display: none; }
+  .work { margin-top: 2em; }
 
-  .how-its-made#second { display: inline-block; }
+  .articles {
+    border-top: .25rem solid var(--clr-foreground);
+    margin-top: 4em;
+  }
+
+  #about-first, #him-first { display: none; }
+
+  #about-second { display: block; }
+
+  #him-second { display: inline-block; }
 }
 </style>

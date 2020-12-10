@@ -122,8 +122,11 @@ export default {
 }
 
 .menu button:hover, .menu button:focus {
-  background-color: var(--base-clr-accent);
   outline: none;
+}
+
+.menu button:focus-visible, .menu button:-moz-focusring {
+  background-color: var(--base-clr-accent);
 }
 
 .menu button::-moz-focus-inner { border: 0; }
@@ -131,6 +134,12 @@ export default {
 .menu svg { width: 2rem; }
 
 .menu svg rect, .menu svg path { fill: var(--base-clr-dark); }
+
+@media screen and (min-width: 700px) {
+  .menu button:hover, .menu button:focus {
+    background-color: var(--base-clr-accent);
+  }
+}
 
 /* Animate menu item transition */
 .first-button-enter, .first-button-leave-to { transform: translateX(8rem); }

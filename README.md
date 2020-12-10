@@ -16,9 +16,7 @@ on the repo or setting up a server. This is an example of development using the 
 
 #### Weather
 
-I get the weather on the homepage from the [Darksky API](https://darksky.net/dev), also using Jamstack techniques. Unfortunately
-right after I hooked it up Darksky was bought by Apple and announced they're going to be shutting it down. I guess I'll need to
-find a replacement pretty soon.
+I get the weather on the homepage from the [Here API](https://developer.here.com/), also using Jamstack techniques.
 
 #### Content
 
@@ -29,5 +27,5 @@ during the build process, I don't need to connect to these APIs every time the s
 ### Typography
 
 I set up responsive typography based on a modified version of [Utopia](https://utopia.fyi/) set up to work with server-side
-rendering. I set type in the [Manrope](https://manropefont.com/) font, a variable font that set me make the `font-weight`s
+rendering. I set type in the [Manrope](https://manropefont.com/) font, a variable font that lets me make the `font-weight`s
 fluid with the screen size in addition to the `font-size`s.

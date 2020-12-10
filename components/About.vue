@@ -2,7 +2,7 @@
   <section class="about" :id="position">
     <h2 class="step-0">About</h2>
     <ul class="step-1">
-      <li>I design for the web and live with my wife in Seattle<CurrentWeather :darksky="darksky" />.</li>
+      <li>I design for the web and live with my wife in Seattle<CurrentWeather :here="here" />.</li>
       <li>I enjoy playing ice hockey and snowboarding.</li>
     </ul>
   </section>
@@ -15,6 +15,6 @@ export default {
   components: {
     CurrentWeather
   },
-  props: ['darksky', 'position']
+  props: ['here', 'position']
 }
 </script>

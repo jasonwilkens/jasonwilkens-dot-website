@@ -7,9 +7,7 @@ export default {
   head: {
     title: 'Jason\'s personal web page',
     meta: [
-      { property: 'og:image:alt', content: 'Photo of Jason and wife on vacation' },
-      { property: 'og:image:width', content: '800' },
-      { property: 'og:image:height', content: '600' },
+      { property: 'og:image:alt', content: 'Photo of Jason and wife on vacation' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon/favicon.ico' },
@@ -32,13 +30,19 @@ export default {
         charset: 'utf-8',
         defer: true,
         async: true
+      },
+      {
+        src: '//instant.page/5.1.0',
+        body: 'true',
+        type: 'module',
+        integrity: 'sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw'
       }
     ],
     noscript: [
       { innerHTML: `
           <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W9HSTKL" height="0"
           width="0" style="display:none;visibility:hidden"></iframe><style>#__nuxt
-          {margin-top: 0;} body.freeze-body {overflow: unset;} div.menu {display: none;} #intro
+          {margin-top: 0;} html body.freeze-body {overflow: auto;} div.menu {display: none;} #intro
           {display: none;}</style>
         `
       }
@@ -83,10 +87,10 @@ export default {
     manifest: {
       name: 'Jason Wilkens dot website',
       short_name: 'Jason',
-      description: 'Personal web page of Jason Wilkens',
+      description: 'A place to put my stuff',
       icons: [
         {
-          src: 'static/favicon/android-chrome-512x512.png',
+          src: 'favicon/android-chrome-512x512.png',
           sizes: '512x512',
           type: 'image/png'
         }
@@ -94,10 +98,14 @@ export default {
       lang: 'en',
       display: 'standalone',
       theme_color: '#FFD200',
-      ogImage: 'https://xenodochial-shockley-6584a2.netlify.app/images/preview.jpg',
-      ogSiteName: 'Jason&#8217; personal web page',
-      ogTitle: 'Hey, it&#8217;s Jason',
-      ogUrl: 'https://xenodochial-shockley-6584a2.netlify.app',
+      ogImage: {
+        path: 'https://jasonwilkens.website/images/preview.jpg',
+        width: 800,
+        height: 600
+      },
+      ogSiteName: 'Jason\'s personal web page',
+      ogTitle: 'Hey, it\'s Jason',
+      ogUrl: 'https://jasonwilkens.website',
       twitterCard: 'summary_large_image'
     },
   },
@@ -110,5 +118,9 @@ export default {
     */
     extend (config, ctx) {
     }
-  }
+  },
+  generate: {
+    fallback: true
+  },
+  target: 'static'
 }
